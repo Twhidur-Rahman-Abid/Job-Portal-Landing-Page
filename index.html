@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,19 +25,22 @@
                 <h1 class="logo">Employ.</h1>
                 
             </div>
-            <div >
+            <div id="nav-itme">
                 <ul>
                     <li><a class="color1" href="">Home</a></li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Post A Job</a></li>
                     <li><a href="">Jobs <span class="span">2</span></a></li>
+                    <li><a href=""><button class="btn">Sign Up</button></a></li>
                 </ul>
             </div>
-            <div >
-                <button class="btn">Sign Up</button>
+            <div class="hambar" >
+                <i class="fa-solid fa-bars bar" id="bar"></i>
+
+                <i class="fa-solid fa-xmark close" id="close"></i>
             </div>
         </nav>
-        <div class="row">
+        <div class="row" id="hero">
             <div class="col-2">
                 <h1 class="header-title anim">Find A Job That Match Your Passion.</h1>
                 <p class="descriftion anim">Besnik is a job search for people with passionate.
@@ -425,10 +431,37 @@
             </div>
         </div>
     </footer>
+    <div>
+        
+    </div>
 
     <!-- ---------------------------------
         footer end
     --------------------------------- -->
+
+
+    <script>
+        let bar = document.getElementById('bar')
+        let close = document.getElementById('close')
+        let nav = document.getElementById('nav-itme')
+
+
+        bar.addEventListener('click',function(){
+
+            nav.style.top = '40px'
+            bar.style.display = 'none'
+            close.style.display = 'block'
+
+        })
+
+        close.addEventListener('click',function(){
+
+        nav.style.top = '-280px'
+        bar.style.display = 'block'
+        close.style.display = 'none'
+
+        })
+    </script>
     
 </body>
 </html>
